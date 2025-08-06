@@ -2,6 +2,8 @@ import React from "react";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../assets/styles/Main.scss';
+import profilePic from '../assets/Facetune_06-03-2023-08-25-16.jpg';
+
 
 function Main() {
 
@@ -9,19 +11,20 @@ function Main() {
     <div className="container">
       <div className="about-section">
         <div className="image-wrapper">
-          <img src="https://my-aws-assets.s3.us-west-2.amazonaws.com/portfolio-img/avatar_circle.jpeg" alt="Avatar" />
+          <img src={profilePic} alt="Phillip Afuwape" style={{ width: '200px', borderRadius: '100px' }} />
+
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="https://github.com/philstorm" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a href="https://www.linkedin.com/in/phillipafuwape" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
-          <h1>Yuji Sato</h1>
-          <p>Full Stack Engineer</p>
+          <h1>Phillip Afuwape</h1>
+          <p>Cybersecurity -  GRC Analyst & AI Governance </p>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-            <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+            <a href="https://github.com/philstorm" target="_blank" rel="noopener noreferrer"><GitHubIcon /></a>
+            <a href="https://linkedin.com/in/phillipafuwape" target="_blank" rel="noopener noreferrer"><LinkedInIcon /></a>
           </div>
         </div>
       </div>

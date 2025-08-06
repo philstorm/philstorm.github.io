@@ -1,44 +1,42 @@
-import React, {useState, useEffect} from "react";
+// src/App.tsx
+import React, { useState, useEffect } from "react";
 import {
+  Navigation,
   Main,
-  Timeline,
   Expertise,
+  Timeline,
+  GitHubProjects,
   Project,
   Contact,
-  Navigation,
   Footer,
+  FadeIn,
 } from "./components";
-import FadeIn from './components/FadeIn';
-import './index.scss';
+import "./index.scss";
 
 function App() {
-    const [mode, setMode] = useState<string>('dark');
+  const [mode, setMode] = useState<"dark" | "light">("dark");
+  const toggleMode = () => setMode((prev) => (prev === "dark" ? "light" : "dark"));
 
-    const handleModeChange = () => {
-        if (mode === 'dark') {
-            setMode('light');
-        } else {
-            setMode('dark');
-        }
-    }
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
-    useEffect(() => {
-        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-      }, []);
+  return (
+    <div className={`main-container ${mode === "dark" ? "dark-mode" : "light-mode"}`}>
+      <Navigation parentToChild={{ mode }} modeChange={toggleMode} />
 
-    return (
-    <div className={`main-container ${mode === 'dark' ? 'dark-mode' : 'light-mode'}`}>
-        <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
-        <FadeIn transitionDuration={700}>
-            <Main/>
-            <Expertise/>
-            <Timeline/>
-            <Project/>
-            <Contact/>
-        </FadeIn>
-        <Footer />
+      <FadeIn transitionDuration={700}>
+        <Main />
+        <Expertise />
+        <Timeline />
+        <GitHubProjects />
+        <Project />
+        <Contact />
+      </FadeIn>
+
+      <Footer />
     </div>
-    );
+  );
 }
 
 export default App;

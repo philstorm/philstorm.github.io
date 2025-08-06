@@ -1,18 +1,22 @@
-import React from "react";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import '../assets/styles/Footer.scss'
+// src/components/Footer.tsx
+import React from 'react';
+import { GitHub, LinkedIn } from '@mui/icons-material';
+import '../assets/styles/Footer.scss';
 
-function Footer() {
+export default function Footer() {
   return (
     <footer>
-      <div>
-        <a href="https://github.com/yujisatojr" target="_blank" rel="noreferrer"><GitHubIcon/></a>
-        <a href="https://www.linkedin.com/in/yujisato/" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
+      <div className="social">
+        <a href="https://github.com/philstorm" target="_blank" rel="noreferrer">
+          <GitHub />
+        </a>
+        <a href="https://www.linkedin.com/in/phillipafuwape" target="_blank" rel="noreferrer">
+          <LinkedIn />
+        </a>
       </div>
-      <p>A portfolio designed & built by <a href="https://github.com/yujisatojr/react-portfolio-template" target="_blank" rel="noreferrer">Yuji Sato</a> with 💜</p>
+      <p>
+        A portfolio designed & built by <strong>Phillip Afuwape</strong> with 💜
+      </p>
     </footer>
   );
 }
-
-export default Footer;

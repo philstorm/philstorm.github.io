@@ -1,48 +1,67 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
-}
+/* src/assets/styles/Contact.scss */
 
-.contact-form {
-  padding-top: 20px;
+/* 1) Make all contact‐section text light on dark background */
+#contact {
+  padding: 2rem 1rem;
+  color: #fff;
 
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
+  h1,
+  p {
+    color: #fff;
+    margin-bottom: 1rem;
   }
 
-  button:hover {
-    background-color: #5000ca;
-    color: white;
+  .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    /* base styles for inputs & textarea */
+    input,
+    textarea {
+      background: #fff;
+      color: #000;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.75rem;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    /* two inputs side by side */
+    input {
+      flex: 1 1 calc(50% - 0.5rem);
+      min-width: 200px;
+    }
+
+    /* full-width message box below */
+    textarea {
+      flex: 1 1 100%;
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* 3) Error state: red border on missing fields */
+    input.error,
+    textarea.error {
+      border-color: #e53935;
+    }
+
+    /* Send button */
+    button {
+      align-self: flex-end;
+      background-color: #fff;
+      color: #050f0b;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: #5000ca;
+      color: #fff;
+    }
   }
-
-  fieldset {
-    background-color: white;
-  }
-}
-
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
-
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
-
-.form-flex .MuiFormControl-root {
-  width: 100%;
-}
-
-form {
-  width: 100% !important;
-}
-
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
 }
