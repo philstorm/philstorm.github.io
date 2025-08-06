@@ -30,10 +30,8 @@ export default function Timeline() {
               Symposia Intern (Remote, TX)
             </h4>
             <p>
-              Automated compliance monitoring by integrating RSA Archer with PowerShell scripts,
-              streamlining evidence collection for 200+ controls across PCI DSS and SOC 2. Led data
-              governance initiatives aligned with AI ethics, NIST AI RMF, NIST SP 800-53 and performed gap assessments
-              across SCADA & IT environments.
+            AI is evolving fast — and so am I.
+            Brought on as an AI Governance Intern, I engineered automated compliance systems that integrated RSA Archer with Microsoft’s Responsible AI Standard — streamlining audit evidence collection for over 200 controls across PCI DSS and SOC 2. I led data governance initiatives rooted in NIST AI RMF, NIST SP 800-53, and AI ethics, performing deep-dive gap assessments across both SCADA and IT ecosystems. My mission: build trust into every layer of AI adoption.
             </p>
           </VerticalTimelineElement>
 

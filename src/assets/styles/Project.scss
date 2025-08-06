@@ -47,3 +47,37 @@
         }
     }
 }
+/* Make all project text white */
+.projects-container {
+    color: #fff;
+  }
+  
+  /* Override links, headings, paragraphs & list-items inside the grid */
+  .projects-container .project a,
+  .projects-container .project h2,
+  .projects-container .summary,
+  .projects-container .desc,
+  .projects-container .tools li {
+    color: #fff;
+  }
+  
+  /* Ensure hovered titles stay white */
+  .projects-container .project h2:hover {
+    color: #fff;
+  }
+  /* FORCE ALL PROJECT TEXT TO WHITE */
+.projects-container,
+.projects-container * {
+  color: #fff !important;
+}
+
+/* If you only want to target headings, paragraphs, links & list-items: */
+/*
+.projects-container h1,
+.projects-container h2,
+.projects-container p,
+.projects-container a,
+.projects-container li {
+  color: #fff !important;
+}
+*/
